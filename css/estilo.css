@@ -105,8 +105,8 @@ h4 {
     overflow: hidden;
 }
 .section2-img{
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -462,16 +462,22 @@ footer{
         justify-content: center;
         width: auto;
     }
+
+    h2{
+        font-size: 60px;
+    }
+    h3{
+        font-size: 20px;
+    }
     .main-index{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
     }
     .section-1{
-        grid-column:2/3;
         grid-row:1/2;
     }
     .section-2{
-        grid-column:1/2;
-        grid-row:1/2;
+        grid-row:2/3;
+        width: 100%;
     }
 
     .section-3{
@@ -582,12 +588,15 @@ footer{
 }
 
 @media(max-width:425px){
-   
+    
+    h1{
+        font-size: 20px;
+    }
     h2{
         font-size: 50px;
     }
     h3{
-        font-size: 20px;
+        font-size: 15px;
     }
     .navbar{
     flex-direction: column;    
@@ -598,7 +607,11 @@ footer{
 
    .main-index{
    grid-template-columns: repeat(1,1fr); 
-   grid-template-rows: repeat(8,1fr);
+   grid-template-rows: repeat(1,1fr);
+   }
+
+   .section-2{
+       display: none; 
    }
    .section-7{
     display: block;
@@ -606,6 +619,8 @@ footer{
 
    .main_estadisticas{
         grid-template-rows: repeat(6,1fr);
+        align-items: left;
+        overflow: hidden;
    }
    .section-9{
     grid-column:1/2;
